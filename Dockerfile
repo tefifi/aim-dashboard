@@ -34,8 +34,6 @@ RUN pip install --upgrade pip && \
 # Copiar el código del proyecto
 COPY . .
 
-# Descargar recursos NLTK necesarios durante el build
-RUN python -c "import nltk; nltk.download('punkt', quiet=True); nltk.download('punkt_tab', quiet=True)"
 
 # Puerto que expone la app
 EXPOSE 8050

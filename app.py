@@ -3,10 +3,14 @@ AIM Dashboard — Punto de entrada principal.
 Ejecutar con: python app.py
 """
 
+import nltk
+nltk.download('punkt', quiet=True)
+nltk.download('punkt_tab', quiet=True)
 import logging
 import dash
 import dash_bootstrap_components as dbc
 from dash import dcc, html
+
 
 from layouts.pages import layout_home, all_layouts
 from callbacks.navegacion import registrar_callbacks
