@@ -9,7 +9,7 @@ LABEL description="AIM Dashboard — Perfil de ciberseguridad para PyMEs"
 # Variables de entorno
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PORT=8050
+    PORT=7860
 
 # Directorio de trabajo dentro del contenedor
 WORKDIR /app
@@ -36,7 +36,7 @@ COPY . .
 
 
 # Puerto que expone la app
-EXPOSE 8050
+EXPOSE 7860
 
 # Comando de inicio con Gunicorn
 # - 2 workers (ajustar según CPU disponibles: 2 * num_cpus + 1)
@@ -45,7 +45,7 @@ EXPOSE 8050
 CMD ["gunicorn", \
      "--workers", "2", \
      "--timeout", "300", \
-     "--bind", "0.0.0.0:8050", \
+     "--bind", "0.0.0.0:7860", \
      "--log-level", "info", \
      "--access-logfile", "-", \
      "--error-logfile", "-", \

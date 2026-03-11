@@ -3,6 +3,16 @@
 **Herramienta de clasificación de perfil de ciberseguridad para PyMEs** basada en la
 Tríada AIM (Awareness, Infrastructure, Management).
 
+
+---
+title: AIM Dashboard
+emoji: 🛡️
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+app_port: 7860
+---
 ---
 
 ## Cómo verlo en localhost
